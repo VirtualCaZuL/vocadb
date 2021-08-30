@@ -190,11 +190,11 @@ export default class UserRepository implements ICommentRepository {
 		paging: PagingProperties;
 		lang: ContentLanguagePreference;
 		query: string;
-		tag: number;
+		tag?: number;
 		albumType: string;
-		artistId: number;
+		artistId?: number;
 		purchaseStatuses: string;
-		releaseEventId: number;
+		releaseEventId?: number;
 		advancedFilters: AdvancedSearchFilter[];
 		sort: string;
 	}): Promise<PartialFindResultContract<AlbumForUserForApiContract>> => {
@@ -422,7 +422,7 @@ export default class UserRepository implements ICommentRepository {
 		artistIds: number[];
 		childVoicebanks: boolean;
 		rating: string;
-		songListId: number;
+		songListId?: number;
 		advancedFilters: AdvancedSearchFilter[];
 		groupByRating: boolean;
 		pvServices?: string;

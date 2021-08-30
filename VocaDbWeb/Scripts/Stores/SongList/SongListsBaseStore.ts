@@ -40,7 +40,7 @@ export default abstract class SongListsBaseStore extends PagedItemsStore<SongLis
 		reaction(() => this.query, this.clear);
 		reaction(() => this.showTags, this.clear);
 		reaction(() => this.sort, this.clear);
-		reaction(() => this.tagFilters.tags.map((tag) => tag.id), this.clear);
+		reaction(() => this.tagFilters.tagIds, this.clear);
 	}
 
 	@computed public get fields(): string {

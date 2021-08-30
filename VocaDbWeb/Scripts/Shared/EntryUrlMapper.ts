@@ -13,7 +13,7 @@ export default class EntryUrlMapper {
 	// id: entry Id.
 	public static details(
 		typeName: string | EntryType,
-		id: number,
+		id?: number,
 		urlFriendlyName?: string,
 	): string {
 		var prefix;
@@ -80,7 +80,7 @@ export default class EntryUrlMapper {
 	}
 
 	public static details_tag_contract(
-		tag: TagBaseContract | TagApiContract,
+		tag?: TagBaseContract | TagApiContract,
 	): string | undefined {
 		if (!tag) return undefined;
 
